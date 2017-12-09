@@ -12,4 +12,14 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
   }
 
+    // Doughnut
+    public doughnutChartLabels:string[] = ['Dati', 'Rimanenti'];
+    public doughnutChartData:number[] = [250, 300];
+    public doughnutChartType:string = 'doughnut';
+   
+    // events
+    public chartClicked(e:any):void {
+      console.log(e);
+    }
+
 }
