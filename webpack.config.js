@@ -260,7 +260,8 @@ module.exports = {
     "string_decoder": "require('string_decoder')",
     "url": "require('url')",
     "util": "require('util')",
-    "zlib": "require('zlib')"
+    "zlib": "require('zlib')",
+    "sqlite3": "require('sqlite3')"
   },
   "resolve": {
     "extensions": [

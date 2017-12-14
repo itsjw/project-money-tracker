@@ -34,7 +34,8 @@
     "electron:mac": "npm run build:prod && npx electron-builder build --mac",
     "test": "karma start ./karma.conf.js",
     "pree2e": "webdriver-manager update --standalone false --gecko false --quiet && npm run build",
-    "e2e": "protractor ./protractor.conf.js"
+    "e2e": "protractor ./protractor.conf.js",
+    "rebuild-sqlite3": "cd node_modules/sqlite3 && npm install nan && node-gyp configure --module_name=node_sqlite3 --module_path=../lib/binding/electron-v1.7-darwin-x64 && node-gyp rebuild --target=1.7.8 --arch=x64 --target_platform=x64 --dist-url=https://atom.io/download/atom-shell --module_name=node_sqlite3 --module_path=../lib/binding/electron-v1.7-darwin-x64"
   },
   "dependencies": {
     "@angular/common": "5.0.3",
@@ -71,6 +72,7 @@
     "cssnano": "3.10.0",
     "electron": "1.7.8",
     "electron-builder": "19.45.4",
+    "electron-rebuild": "^1.6.0",
     "electron-reload": "1.2.1",
     "exports-loader": "0.6.4",
     "file-loader": "1.1.5",
@@ -99,6 +101,7 @@
     "sass-loader": "6.0.6",
     "script-loader": "0.7.1",
     "source-map-loader": "0.2.1",
+    "sqlite3": "^3.1.13",
     "style-loader": "0.18.2",
     "stylus-loader": "3.0.1",
     "ts-node": "3.3.0",
